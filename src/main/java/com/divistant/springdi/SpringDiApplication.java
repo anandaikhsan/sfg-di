@@ -1,9 +1,6 @@
 package com.divistant.springdi;
 
-import com.divistant.springdi.controllers.ConstructorInjectedController;
-import com.divistant.springdi.controllers.MyController;
-import com.divistant.springdi.controllers.PropertyInjectedController;
-import com.divistant.springdi.controllers.SetterInjectedController;
+import com.divistant.springdi.controllers.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -40,6 +37,10 @@ public class SpringDiApplication {
 		ConstructorInjectedController constructorInjectedController
 				= (ConstructorInjectedController) ctx.getBean("constructorInjectedController");
 		System.out.println(constructorInjectedController.getGreeting());
+
+		System.out.println("-----Profile Bean");
+		I18nController i18nController = (I18nController) ctx.getBean("i18nController");
+		System.out.println(i18nController.sayHello());
 
 	}
 
