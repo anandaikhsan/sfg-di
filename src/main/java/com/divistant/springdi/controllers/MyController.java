@@ -1,4 +1,4 @@
-package com.divistant.springdi.controller;
+package com.divistant.springdi.controllers;
 
 import org.springframework.stereotype.Controller;
 
