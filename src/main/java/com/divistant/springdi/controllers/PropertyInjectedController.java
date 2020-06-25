@@ -1,12 +1,22 @@
 package com.divistant.springdi.controllers;
 
 import com.divistant.springdi.services.GreetingService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 
 /**
  * Contoh class yang melakukan Dependency Injection
  * menggunakan property
+ *
+ * Anotasi @Controller memberitahu Spring bahwa class
+ * ini merupakan Spring managed component
  */
+
+@Controller
 public class PropertyInjectedController {
+
+    // Memberitahu Spring untuk melakukan injeksi pada property
+    @Autowired
     public GreetingService greetingService;
 
     public String getGreeting(){
