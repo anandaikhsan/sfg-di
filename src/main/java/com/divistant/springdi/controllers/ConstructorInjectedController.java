@@ -1,6 +1,7 @@
 package com.divistant.springdi.controllers;
 
 import com.divistant.springdi.services.GreetingService;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
 /**
@@ -15,9 +16,12 @@ public class ConstructorInjectedController {
 
     /**
      * Constructor based Injection tidak memerlukan (Opsional)
-     * anotasi @AutoWired
+     * anotasi @AutoWired.
+     *
+     * Anotasi @Qualifier memberitahu Spring class mana
+     * yang harus di-inject
      */
-    public ConstructorInjectedController(GreetingService greetingService) {
+    public ConstructorInjectedController(@Qualifier("constructorInjectedGreetingService") GreetingService greetingService) {
         this.greetingService = greetingService;
     }
 

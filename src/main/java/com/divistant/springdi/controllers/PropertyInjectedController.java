@@ -2,6 +2,7 @@ package com.divistant.springdi.controllers;
 
 import com.divistant.springdi.services.GreetingService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
 /**
@@ -15,6 +16,8 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class PropertyInjectedController {
 
+    // Memberitahu Spring class yang harus di-inject
+    @Qualifier("propertyInjectedGreetingService")
     // Memberitahu Spring untuk melakukan injeksi pada property
     @Autowired
     public GreetingService greetingService;

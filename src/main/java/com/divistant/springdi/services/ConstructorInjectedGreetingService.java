@@ -6,9 +6,10 @@ import org.springframework.stereotype.Service;
  * Class merupakan spring managed component
  */
 @Service
-public class GreetingServiceImpl implements GreetingService {
+public class ConstructorInjectedGreetingService implements GreetingService {
+
     @Override
     public String sayGreeting() {
-        return "Halo Dunia!";
+        return "Halo Dunia!(Constructor)";
     }
 }

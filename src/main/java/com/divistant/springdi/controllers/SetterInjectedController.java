@@ -2,6 +2,7 @@ package com.divistant.springdi.controllers;
 
 import com.divistant.springdi.services.GreetingService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
 /**
@@ -12,6 +13,8 @@ import org.springframework.stereotype.Controller;
 public class SetterInjectedController {
     private GreetingService greetingService;
 
+    // qualifier pada method
+    @Qualifier("setterInjectedGreetingService")
     // autowired pada method
     @Autowired
     public void setGreetingService(GreetingService greetingService){

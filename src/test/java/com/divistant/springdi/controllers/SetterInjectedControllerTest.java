@@ -1,10 +1,8 @@
 package com.divistant.springdi.controllers;
 
-import com.divistant.springdi.services.GreetingServiceImpl;
+import com.divistant.springdi.services.ConstructorInjectedGreetingService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class SetterInjectedControllerTest {
     SetterInjectedController controller;
@@ -14,7 +12,7 @@ class SetterInjectedControllerTest {
         controller = new SetterInjectedController();
 
         //Dependency di-inject melalui method setter
-        controller.setGreetingService(new GreetingServiceImpl());
+        controller.setGreetingService(new ConstructorInjectedGreetingService());
     }
 
     @Test
