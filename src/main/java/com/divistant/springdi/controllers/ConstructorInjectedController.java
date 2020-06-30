@@ -1,6 +1,6 @@
 package com.divistant.springdi.controllers;
 
-import com.divistant.springdi.services.GreetingService;
+import com.divistant.services.GreetingService;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 

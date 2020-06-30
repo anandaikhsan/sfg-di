@@ -1,4 +1,4 @@
-package com.divistant.springdi.services;
+package com.divistant.services;
 
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;

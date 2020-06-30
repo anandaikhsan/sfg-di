@@ -1,4 +1,4 @@
-package com.divistant.springdi.services;
+package com.divistant.services;
 
 
 public interface GreetingService {

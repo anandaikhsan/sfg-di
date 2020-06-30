@@ -4,10 +4,13 @@ import com.divistant.springdi.controllers.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 
 import java.util.Set;
 
 @SpringBootApplication
+// menentukan lokasi untuk scan komponen oleh Spring
+@ComponentScan(basePackages = {"com.divistant.services", "com.divistant.springdi"})
 public class SpringDiApplication {
 
 	public static void main(String[] args) {

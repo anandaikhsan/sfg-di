@@ -1,6 +1,6 @@
 package com.divistant.springdi.controllers;
 
-import com.divistant.springdi.services.ConstructorInjectedGreetingService;
+import com.divistant.services.ConstructorInjectedGreetingService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
